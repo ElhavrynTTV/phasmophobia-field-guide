@@ -1,0 +1,44 @@
+ELHAVRYN'S PHASMOPHOBIA FIELD GUIDE
+Free VS Code project • October 29, 2026 source edition
+
+INSTALL INTO YOUR EXISTING VS CODE PROJECT
+1. Keep your current working app safe: in VS Code's Explorer, rename your existing index.html to index-backup.html.
+2. Extract this ZIP, then copy its contents into the Phasmophobia-Guide-App folder you've already created.
+   All files must be alongside each other as shown below; do not put the whole app folder inside the app folder.
+3. Open the new index.html in VS Code, right-click and choose "Show Preview" / "Open with Live Preview".
+4. You can also visit the Live Preview address in Chrome while VS Code's server is running.
+
+FILES
+ index.html              Main page
+ style.css               Theme: faint DOTS and UV glow
+ app.js                  Search, chapter reader, ghost dossier reader, evidence filters, bookmarks
+ data.js                 Actual guide text extracted from your uploaded PDF
+ data.json               Same data, available to re-use in future versions
+ manifest.webmanifest    Installable web-app settings
+ sw.js                   Offline caching after first visit (HTTPS or localhost)
+ assets/icon-192.png     App icon
+ assets/icon-512.png     App icon
+ assets/Phasmophobia_Master_Field_Guide.pdf   Original formatted 31-page guide
+
+HOW TO USE
+- Search by ghost, evidence, tests, or chapter text.
+- Select evidence chips to narrow the 30 ghost cards. The Mimic remains possible with Orbs.
+- Click Open dossier for a readable ghost profile: fields are drawn from the PDF's dossier sections.
+- Open All 19 chapters to browse complete extracted section text.
+- Open original PDF whenever a table's original formatting matters.
+- Star ghosts to bookmark them in the current browser.
+- Updates & previews separates seasonal/released guidance and announced Resonance content.
+
+ABOUT PUBLISHING / COST
+No AI subscription, build service or backend is required. The app can be hosted free on a public
+GitHub Pages project. The PWA install option depends on browser support and HTTPS hosting.
+
+DATA STATUS
+The PDF was revised October 29, 2026. The PDF itself indicates baseline v0.19.1.0 and
+Resonance as an announced late-November preview, NOT a released update. This project uses
+that PDF as its source and has not independently verified the real-world game facts.
+
+NOTE
+The chapter reader displays extracted text; dense tables may lose their column layout.
+Use the original PDF button to see tables exactly as authored. This package is meant to
+be a starting working app, not final game-information verification or polished publishing.

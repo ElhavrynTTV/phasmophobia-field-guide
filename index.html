@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="description" content="Free unofficial Phasmophobia field guide by Elhavryn: 30 ghost dossiers, evidence, hunt behavior, lore, equipment, maps, and update notes.">
+  <title>Elhavryn's Phasmophobia Field Guide</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to guide content</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="eyebrow"><span class="signal" aria-hidden="true"></span> ELHAVRYN / INVESTIGATOR ARCHIVE <span class="tiny-star">✦</span> UNOFFICIAL FAN GUIDE</div>
+      <div class="hero-content">
+        <div>
+          <h1>PHASMOPHOBIA <span>FIELD GUIDE</span></h1>
+          <p class="intro">Investigate. Identify. Survive. Browse the complete ghost dossiers and field notes from Elhavryn's October 29, 2026 master guide.</p>
+          <div class="meta-line"><span>30 GHOSTS</span><span>19 CHAPTERS</span><span>v0.19.1.0 BASELINE</span></div>
+        </div>
+        <div class="scanner" aria-hidden="true"><div class="orb"><div class="orb-core"></div></div><span>UV SCAN / ACTIVE</span></div>
+      </div>
+      <div class="search-row">
+        <label class="searchbox" for="search"><span class="searchicon" aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Search ghosts, evidence, tips, lore, chapters..." aria-label="Search the field guide"></label>
+        <button class="outline" id="clearSearch" type="button">Clear search</button>
+      </div>
+      <nav class="tabs" aria-label="Guide sections">
+        <button type="button" class="tab active" data-view="ghosts" aria-pressed="true">Ghost library</button>
+        <button type="button" class="tab" data-view="chapters" aria-pressed="false">All 19 chapters</button>
+        <button type="button" class="tab" data-view="updates" aria-pressed="false">Updates &amp; previews</button>
+        <button type="button" class="tab" data-view="saved" aria-pressed="false">★ Saved ghosts <span id="savedCount">0</span></button>
+      </nav>
+    </header>
+
+    <main id="content" tabindex="-1">
+      <aside class="notice" role="note"><strong>IMPORTANT INVESTIGATION RULE:</strong> Treat most ghost behavior as probabilistic. Use controlled tests, account for difficulty settings and cursed hunts, and always remember The Mimic's fake Ghost Orbs.</aside>
+      <div class="page-title"><div><p class="section-kicker" id="kicker">GHOST IDENTIFICATION</p><h2 id="viewTitle">Ghost library</h2><p class="section-description" id="viewDescription">Every ghost from your master guide, with evidence, field tests, survival notes, and folklore.</p></div><a class="pdf-link" id="fullPdf" href="assets/Phasmophobia_Master_Field_Guide.pdf" target="_blank" rel="noopener">Open original PDF ↗</a></div>
+      <div id="evidencePanel" class="filter-panel"><p>Filter by observed evidence <span class="muted">(standard 3-evidence contracts; The Mimic's fake Orbs stay possible)</span></p><div id="evidenceButtons" class="chip-row"></div><button type="button" id="clearEvidence" class="text-button">Reset evidence filters</button></div>
+      <div class="results-bar"><span id="resultCount" aria-live="polite">Loading guide...</span><span class="source-note">From the uploaded October 29, 2026 edition</span></div>
+      <div id="results" class="card-grid"></div>
+      <div id="empty" class="empty" hidden><h3>No matching entries</h3><p>Try a different search or reset the evidence filters.</p></div>
+    </main>
+    <footer><p>Made by Elhavryn • Free unofficial fan resource • Not affiliated with or endorsed by Kinetic Games.</p><p>Phasmophobia and its trademarks belong to Kinetic Games. All game details reflect the dated source guide and may change in future updates.</p></footer>
+  </div>
+  <dialog id="reader" class="reader"><div class="reader-inner"><div class="reader-header"><span id="readerKicker">FIELD NOTES</span><button type="button" id="closeReader" class="close-reader" aria-label="Close guide details">✕</button></div><div id="readerBody" class="reader-body"></div></div></dialog>
+</body>
+</html>
