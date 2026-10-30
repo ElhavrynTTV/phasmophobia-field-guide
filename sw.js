@@ -1,5 +1,5 @@
 /* Offline support: caches the guide, its code, icons, and original PDF. */
-const CACHE='elhavryn-phasmo-guide-2026-10-29-v1';
+const CACHE='elhavryn-phasmo-guide-2026-10-29-v2';
 const ASSETS=['./','./index.html','./style.css','./app.js','./data.js','./manifest.webmanifest','./assets/icon-192.png','./assets/icon-512.png','./assets/Phasmophobia_Master_Field_Guide.pdf'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});

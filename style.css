@@ -196,3 +196,65 @@
     padding: 18px;
   }
 }
+
+/* Feedback and bug report form */
+.feedback-form {
+  display: grid;
+  gap: 18px;
+  max-width: 780px;
+  margin-top: 25px;
+}
+
+.feedback-form label {
+  display: grid;
+  gap: 8px;
+  color: #a2f9ba;
+  font-weight: 700;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #28435a;
+  border-radius: 12px;
+  background: #081321;
+  color: #eaf4ff;
+  font: inherit;
+}
+
+.feedback-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  outline: 2px solid #72eaff;
+  outline-offset: 2px;
+}
+
+.feedback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.feedback-actions button {
+  min-height: 48px;
+}
+
+#feedbackStatus {
+  color: #a2f9ba;
+  font-weight: 600;
+}
+
+.feedback-preview {
+  min-height: 190px;
+}
+
+.feedback-preview[hidden] {
+  display: none;
+}

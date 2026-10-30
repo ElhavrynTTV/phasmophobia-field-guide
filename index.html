@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="data.js"></script>
   <script defer src="app.js"></script>
+  <script defer src="feedback.js"></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to guide content</a>
@@ -40,6 +41,7 @@
 <div class="guide-links" aria-label="Guide help and credits">
   <a href="#install-help">📱 Help &amp; Installation</a>
   <a href="#community-credits">💚 Community Testers &amp; Credits</a>
+  <a href="#feedback">📝 Feedback &amp; Bug Reports</a>
 </div>
 
     </header>
@@ -99,6 +101,77 @@
     👻 Offline access: Open the guide while connected
     to the internet first so its content can be saved
     for offline use.
+  </p>
+</section>
+
+<!-- FEEDBACK AND BUG REPORTS -->
+<section id="feedback" class="support-section">
+  <h2>📝 Feedback &amp; Bug Reports</h2>
+  <p>
+    Found something wrong, spotted a bug, or have an idea?
+    Help improve Elhavryn's Phasmophobia Field Guide!
+  </p>
+
+  <form id="feedbackForm" class="feedback-form">
+    <label>
+      Report type
+      <select name="type" required>
+        <option value="Incorrect guide information">Incorrect guide information</option>
+        <option value="App bug">App bug</option>
+        <option value="Feature suggestion">Feature suggestion</option>
+        <option value="Other feedback">Other feedback</option>
+      </select>
+    </label>
+
+    <label>
+      Short description
+      <input name="title" type="text" maxlength="100"
+        placeholder="Example: Deogen evidence needs checking"
+        required>
+    </label>
+
+    <label>
+      Tell me what happened or what should change
+      <textarea name="details" maxlength="1000"
+        placeholder="Describe the issue or your suggestion..."
+        required></textarea>
+    </label>
+
+    <label>
+      Ghost, chapter, or feature (optional)
+      <input name="area" type="text" maxlength="100"
+        placeholder="Example: Chapter 2, Spirit Box">
+    </label>
+
+    <label>
+      Device (optional)
+      <select name="device">
+        <option value="">Choose a device</option>
+        <option>Android</option>
+        <option>iPhone / iPad</option>
+        <option>Windows PC</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+    <div class="feedback-actions">
+      <button type="button" class="outline" id="copyFeedback">
+        Copy report for Discord
+      </button>
+      <button type="button" class="outline" id="openIssue">
+        Continue to GitHub
+      </button>
+    </div>
+
+    <p id="feedbackStatus" role="status" aria-live="polite"></p>
+    <textarea id="feedbackPreview" class="feedback-preview"
+      readonly hidden aria-label="Prepared feedback report"></textarea>
+  </form>
+
+  <p class="support-note">
+    Reports are not sent automatically. Copy your report to
+    share privately, or use GitHub Issues (account required).
+    GitHub Issues are public, so don't include private information.
   </p>
 </section>
 
